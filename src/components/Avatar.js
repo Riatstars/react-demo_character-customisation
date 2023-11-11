@@ -16,10 +16,11 @@ function Avatar({
   earrings,
   glasses,
   hat,
-  neckwear
+  neckwear,
+  randomise
 } ) {
   return (
-  <div>
+  <>
     <div className='avatar'>
         <Parts partName={'body'} index={body} zIndex={1}></Parts>
 
@@ -36,15 +37,19 @@ function Avatar({
 
         <Parts partName={'accessories/earrings'} index={earrings} zIndex={4}></Parts>
         <Parts partName={'accessories/glasses'} index={glasses} zIndex={4}></Parts>
-        <Parts partName={'accessories/hats'} index={hat} zIndex={4}></Parts>
-        <Parts partName={'accessories/neckwear'} index={neckwear} zIndex={4}></Parts>
-
-
-        
-
+        <Parts partName={'accessories/hats'} index={hat} zIndex={5}></Parts>
+        <Parts partName={'accessories/neckwear'} index={neckwear} zIndex={3}></Parts>
     </div>
+    <div className="text-center">
+        <button className="button" onClick={() => randomise()}>
+                    Randomize!
+        </button>
+							
+		</div>
+  </>
 
-  </div>
+
+ 
   )
 }
 
